@@ -12,6 +12,5 @@ foreach ($numberArray as $number){
     }
 }
 
-var_dump($evenUnevenArray)
-
+var_dump($evenUnevenArray);
 ?>
