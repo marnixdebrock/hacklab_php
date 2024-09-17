@@ -1,7 +1,7 @@
 <?php
 
 //gets random card from arrays and returns a random one
-function getRandomCard(){
+function getRandomCard(): string{
     //variables
     $baseCard = array(2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A');
     $suits = array('clubs', 'diamonds', 'hearts', 'spades');
@@ -14,7 +14,7 @@ function getRandomCard(){
 }
 
 //check if the user input is the same as a the random card, if so, returns true
-function checkUserGuessTrue($fuserGuess, $frandomCard){
+function checkUserGuessTrue($fuserGuess, $frandomCard): bool{
     if (strtoupper($fuserGuess) == strtoupper($frandomCard)){
         return true;
     }
