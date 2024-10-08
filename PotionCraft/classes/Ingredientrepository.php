@@ -1,6 +1,5 @@
 <?php
 
-
 class IngredientRepository{
     public array $ingredients = [];
 
