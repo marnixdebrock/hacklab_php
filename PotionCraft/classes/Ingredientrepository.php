@@ -1,40 +1,23 @@
 <?php
 
-class IngredientRepository{
-    public array $ingredients = [];
+class IngredientRepository
+{
+    private readonly DAO $dao;
 
-
-    public function __construct(){
-        if(isset($_SESSION['ingredients'])){
-            $this->ingredients = $_SESSION['ingredients'];
-        }else{
-            $_SESSION['ingredients'] = [];
-        }
-
+    public function __construct(DAO $dao)
+    {
+        $this->dao = $dao;
     }
 
-    public function addIngredient(Ingredient ...$ingredients):void{
-        $this->ingredients = array_merge($this->ingredients, $ingredients);
-
-        $this->save();
+    public function get(): mixed
+    {
+        return $this->dao->get();
     }
 
-    public function deleteIngredient(string $name):void{
-        $ingredient = $this->getIndexByName($name);
-        unset($this->ingredients[$ingredient]);
-
-        $this->save();
+    public function add(string $name, string $color, int $quantity): void
+    {
+        $this->dao->add(new Ingredient($name, $color, $quantity));
     }
 
-    private function getIndexByName(string $name){
-        foreach($this->ingredients as $index => $ingredient){
-            if ($ingredient->name == $name){
-                return $index;
-            }
-        }
-    }
-
-    private function save(): void{
-        $_SESSION['ingredients'] = $this->ingredients;
-    }
+    public function delete(int $id): void {}
 }

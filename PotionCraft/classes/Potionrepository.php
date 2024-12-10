@@ -1,43 +1,26 @@
 <?php
 
-class PotionRepository{
-    public array $potions = [];
+class PotionRepository
+{
+    private readonly DAO $dao;
 
-
-    public function __construct(){
-        if(isset($_SESSION['potions'])){
-            $this->potions = $_SESSION['potions'];
-        }else{
-            $_SESSION['potions'] = [];
-        }
+    public function __construct(DAO $dao)
+    {
+        $this->dao = $dao;
     }
 
-    public function addPotion(Potion ...$potions): void{
-        $this->potions = array_merge($this->potions, $potions);
-
-        $this->save();
+    public function get(): mixed
+    {
+        return  array_map('Potion::toPotion', $this->dao->get());
     }
 
-
-    public function deletePotion(string $name):void{
-        $potion = $this->getIndexByName($name);
-        unset($this->potions[$potion]);
-
-        $this->save();
+    public function add(string $name, string $type, string $color): void
+    {
+        $this->dao->add(new Potion($name, $type, $color));
     }
 
-    private function getIndexByName(string $name){
-        foreach($this->potions as $index => $potion){
-            if ($potion->name == $name){
-                return $index;
-            }
-        }
+    public function delete(int $id): void
+    {
+        $this->dao->delete($id);
     }
-
-
-    private function save(): void{
-        $_SESSION['potions'] = $this->potions;
-    }
-
-
 }

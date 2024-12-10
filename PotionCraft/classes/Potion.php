@@ -1,28 +1,45 @@
 <?php
 
-class Potion{
-        
-    public array $ingredients = [];
-    public string $name;
-    public string $type;
-    public string $color;
+class Potion extends Item
+{
+    private int $id;
+    private string $name;
+    private string $type;
+    private string $color;
 
-    function __construct(string $name, string $type, string $color){
+    static int $count = 0;
+
+    public function __construct(int $id = 0, string $name, string $type, string $color)
+    {
+        $this->id = $id ?? ++static::$count;
         $this->name = $name;
         $this->type = $type;
         $this->color = $color;
     }
 
-    public function addIngredient(Ingredient ...$ingredients):void{
-       $this->ingredients = array_merge($this->ingredients, $ingredients);
+    public function toArray(): array
+    {
+        return ['name' => $this->name, 'type' => $this->type, 'color' => $this->color];
     }
 
-    public function deleteIngredient(string $name): void{
-        foreach($this->ingredients as $index => $ingredient){
-            if ($ingredient->name == $name){
-                unset($this->ingredients[$index]);
-            }
-        }
+    public static function toPotion(array $data): Potion
+    {
+        return new Potion(...$data);
     }
 
-} 
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function getName() 
+    {
+        return 
+
+        
+    }
+
+    public function getType() {}
+
+    public function getColor() {}
+}
