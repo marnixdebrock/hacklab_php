@@ -12,7 +12,6 @@ class Author
     private readonly DateTimeImmutable $dateOfBirth;
 
 
-
     public function __construct(int $id, string $firstName, string $lastName, DateTimeImmutable $dateOfBirth)
     {
         $this->id = ++static::$count;
@@ -21,17 +20,15 @@ class Author
         $this->dateOfBirth = $dateOfBirth;
     }
 
-    public function add(array $book): void
-    {
-        global $books;
-        $books[] = $book;
-    }
+    public function getId(){}
 
-    public function get(int $id){}
+    public function getFirstName(){}
 
-    public function getAll(){}
+    public function getLastName(int $id){}
 
-    public function delete(int $id){}
+    public function getDateOfBirth(){}
+
+    public function getDateOfBirthAsString(){}
 
 
 

@@ -2,17 +2,18 @@
 
 class Book
 {
-    private readonly int $id;
+    private static int $count = 0;
+    private int $id;
     private readonly string $title;
     private readonly string $author;
     private readonly string $isbn;
     private readonly string $publisher;
-    private readonly DateTimeImmutable $publicationDate;
+    private readonly string $publicationDate;
     private readonly int $pages;
 
-    public function __construct(int $id, string $title, string $author, string $isbn, string $publisher, DateTimeImmutable $publicationDate, int $pages)
+    public function __construct(string $title, string $author, string $isbn, string $publisher, string $publicationDate, int $pages)
     {
-        $this->id = $id;
+        $this->id = ++static::$count;
         $this->title = $title;
         $this->author = $author;
         $this->isbn = $isbn;

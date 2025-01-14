@@ -10,7 +10,7 @@ class Main
 //        $this->bookrepository = $bookrepository;
 //    }
 
-    public function showMainMenu()
+    public function showMainMenu(): void
     {
         echo "Pick one of the 4 options and enter its respective index.\n";
         echo "1. Add Book - - 2. Show all Books  - - 3. Remove Book - - 4. Show Authors Books - - 5. Exit:\n";
@@ -30,25 +30,34 @@ class Main
                 $this->handleShowAuthorsBooks();
                 break;
             case '5':
-                global $run;
                 break;
         }
     }
 
     public function handleAddBook(): void
     {
-        $book = showBookForm();
-        addBook($book);
+        $bookRepository = new BookRepository();
+        $bookRepository->add(new Book(...$this->showBookForm()));
     }
 
     public function showBookForm(): array
     {
-        $author = showAuthorsMenu();
+        $author = 'testauteur';
         echo "Author: $author\n";
-        echo "Fill in the name of the book you would like to add.\n";
-        $userInput = readline();
 
-        return array($userInput, $author);
+        echo "Enter book title:\n";
+        $userInputBookTitle = readline();
+        echo "Enter book ISBN:\n";
+        $userInputBookIsbn = readline();
+        echo "Enter book publisher:\n";
+        $userInputBookPublisher = readline();
+        echo "Enter book publishing date:\n";
+        $userInputBookPublishDate = readline();
+        echo "Enter amount of book pages:\n";
+        $userInputBookPages = readline();
+
+
+        return array($userInputBookTitle, $author, $userInputBookIsbn, $userInputBookPublisher, $userInputBookPublishDate, $userInputBookPages);
 
     }
 
@@ -81,7 +90,7 @@ class Main
 
     public function showAllBooks(): void
     {
-        showBookCatalog();
+        $this->showBookCatalog();
     }
 
     public function showBookCatalog(): void

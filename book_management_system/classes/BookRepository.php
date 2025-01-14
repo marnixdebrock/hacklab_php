@@ -4,9 +4,8 @@ class BookRepository
 {
     private array $books;
 
-    public function __construct(array $books)
-    {
-        $this->books = array();
+    public function __construct() {
+        $this->books = [];
     }
 
     public function add(Book ...$books): void
