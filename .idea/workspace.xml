@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="Added book management system">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/Author.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/Book.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/BookRepositoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/MainTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/ShowAuthorMenuTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hacklab_php.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hacklab_php.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/classes/Author.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/classes/Book.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/classes/BookRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/classes/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Author.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Book.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/classes/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/index.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/book_management_system/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -33,7 +41,37 @@
     &quot;accountId&quot;: &quot;60023739-0e07-419d-8f31-9349847b9580&quot;
   }
 }</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/composer" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/book_management_system/vendor/phpunit/phpunit" />
+    </include_path>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -47,14 +85,19 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "PHP Script.Book.php.executor": "Run",
+    "PHP Script.BookRepository.php.executor": "Run",
     "PHP Script.Main.php.executor": "Run",
-    "PHP Script.index.php.executor": "Debug",
+    "PHP Script.index.php.executor": "Run",
+    "PHPUnit.BookRepositoryTest.executor": "Run",
+    "PHPUnit.BookRepositoryTest.testBookRepositorygetAll.executor": "Run",
+    "PHPUnit.MainTest.executor": "Run",
+    "PHPUnit.MainTest.testMain.executor": "Run",
+    "PHPUnit.ShowAuthorMenuTest.testShowAuthorMenu.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/htdocs/php/hacklab_php",
+    "last_opened_file_path": "C:/xampp/htdocs/php/hacklab_php/book_management_system/vendor/bin/phpunit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +106,42 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php\hacklab_php\book_management_system\src" />
+      <recent name="C:\xampp\htdocs\php\hacklab_php\book_management_system" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.MainTest">
+    <configuration name="BookRepositoryTest.testBookRepositorygetAll" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="BookRepositoryTest" file="$PROJECT_DIR$/book_management_system/src/tests/Unit/BookRepositoryTest.php" method="testBookRepositorygetAll" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MainTest" file="$PROJECT_DIR$/book_management_system/src/tests/Unit/MainTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainTest.testMain" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MainTest" file="$PROJECT_DIR$/book_management_system/src/tests/Unit/MainTest.php" method="testMain" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ShowAuthorMenuTest.testShowAuthorMenu" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ShowAuthorMenuTest" file="$PROJECT_DIR$/book_management_system/src/tests/Unit/ShowAuthorMenuTest.php" method="testShowAuthorMenu" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/book_management_system/src/index.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.MainTest" />
+        <item itemvalue="PHP Script.index.php" />
+        <item itemvalue="PHPUnit.MainTest.testMain" />
+        <item itemvalue="PHPUnit.BookRepositoryTest.testBookRepositorygetAll" />
+        <item itemvalue="PHPUnit.ShowAuthorMenuTest.testShowAuthorMenu" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -81,6 +160,7 @@
       <updated>1736519699956</updated>
       <workItem from="1736519702182" duration="422000" />
       <workItem from="1736520210588" duration="869000" />
+      <workItem from="1737722000419" duration="10816000" />
     </task>
     <task id="LOCAL-00001" summary="Added book management system">
       <option name="closed" value="true" />
@@ -114,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736520316769</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test commit">
+      <option name="closed" value="true" />
+      <created>1736861477087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736861477087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +210,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added book management system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added book management system" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PhpLocalRunConfigurationType">
+        <watch expression="$this" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

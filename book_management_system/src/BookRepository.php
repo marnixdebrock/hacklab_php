@@ -1,4 +1,5 @@
 <?php
+namespace Marnix\BookManagementSystem;
 
 class BookRepository
 {
@@ -15,9 +16,15 @@ class BookRepository
 
     public function get(int $id){}
 
-    public function getAll(){}
+    public function getAll(): array
+    {
+        return $this->books;
+    }
 
-    public function delete(int $id){}
+    public function delete(int $id): void
+    {
+        unset($this->books[$id]);
+    }
 
 
     public function getBooksByAuthor(int $id): void
