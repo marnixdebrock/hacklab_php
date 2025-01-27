@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/Author.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/Book.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/BookRepositoryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/MainTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/ShowAuthorMenuTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hacklab_php.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hacklab_php.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="Implemented the displaying and removing of information of books, added tests, added some get functions,">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Author.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Book.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/classes/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +16,9 @@
   </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/book_management_system/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,12 +26,12 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/marnixdebrock/hacklab_php.git&quot;,
-    &quot;accountId&quot;: &quot;60023739-0e07-419d-8f31-9349847b9580&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/marnixdebrock/hacklab_php.git",
+    "accountId": "9f265ccd-29b3-49bb-9e49-e922fc98401c"
   }
-}</component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/cli-parser" />
@@ -87,7 +78,7 @@
     "PHP Script.Book.php.executor": "Run",
     "PHP Script.BookRepository.php.executor": "Run",
     "PHP Script.Main.php.executor": "Run",
-    "PHP Script.index.php.executor": "Run",
+    "PHP Script.index.php.executor": "Debug",
     "PHPUnit.BookRepositoryTest.executor": "Run",
     "PHPUnit.BookRepositoryTest.testBookRepositorygetAll.executor": "Run",
     "PHPUnit.MainTest.executor": "Run",
@@ -112,7 +103,7 @@
       <recent name="C:\xampp\htdocs\php\hacklab_php\book_management_system" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.MainTest">
+  <component name="RunManager" selected="PHP Script.index.php">
     <configuration name="BookRepositoryTest.testBookRepositorygetAll" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="BookRepositoryTest" file="$PROJECT_DIR$/book_management_system/src/tests/Unit/BookRepositoryTest.php" method="testBookRepositorygetAll" scope="Method" />
       <method v="2" />
@@ -134,8 +125,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.MainTest" />
         <item itemvalue="PHP Script.index.php" />
+        <item itemvalue="PHPUnit.MainTest" />
         <item itemvalue="PHPUnit.MainTest.testMain" />
         <item itemvalue="PHPUnit.BookRepositoryTest.testBookRepositorygetAll" />
         <item itemvalue="PHPUnit.ShowAuthorMenuTest.testShowAuthorMenu" />
@@ -145,8 +136,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PS-243.22562.233" />
-        <option value="bundled-php-predefined-a98d8de5180a-7980c7aaca61-com.jetbrains.php.sharedIndexes-PS-243.22562.233" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PS-243.23654.168" />
+        <option value="bundled-php-predefined-a98d8de5180a-4c3855d0ab16-com.jetbrains.php.sharedIndexes-PS-243.23654.168" />
       </set>
     </attachedChunks>
   </component>
@@ -160,7 +151,8 @@
       <updated>1736519699956</updated>
       <workItem from="1736519702182" duration="422000" />
       <workItem from="1736520210588" duration="869000" />
-      <workItem from="1737722000419" duration="10816000" />
+      <workItem from="1737722000419" duration="11075000" />
+      <workItem from="1738007077824" duration="4164000" />
     </task>
     <task id="LOCAL-00001" summary="Added book management system">
       <option name="closed" value="true" />
@@ -202,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736861477087</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented the displaying and removing of information of books, added tests, added some get functions">
+      <option name="closed" value="true" />
+      <created>1737733040036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737733040036</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,11 +211,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added book management system" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="Implemented the displaying and removing of information of books, added tests, added some get functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the displaying and removing of information of books, added tests, added some get functions" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/book_management_system/src/BookRepository.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PhpLocalRunConfigurationType">
+        <watch expression="$this" />
         <watch expression="$this" />
       </configuration>
     </watches-manager>

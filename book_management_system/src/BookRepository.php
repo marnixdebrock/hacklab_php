@@ -29,9 +29,8 @@ class BookRepository
 
     public function getBooksByAuthor(int $id): void
     {
-        global $books;
         $counter = 0;
-        foreach ($books as $book) {
+        foreach ($this->books as $book) {
             if($book[1] == $id){
                 echo $counter . '. ' . $book[0] . "\n";
                 $counter++;

@@ -43,13 +43,17 @@ class Main
 
     public function showBookForm(): array
     {
-        if(!empty($this->authors))
+        if(empty($this->authors))
         {
-            $author = $this->handleAddAuthor();
-        }else{
             $author = $this->showAuthorsForm();
+        }else{
+            $author = $this->handleAddAuthor();
         }
 
+        if (!in_array($author, $this->authors))
+        {
+            $this->addAuthor($author);
+        }
 
         echo "Enter book title:\n";
         $userInputBookTitle = readline();
@@ -91,12 +95,9 @@ class Main
         echo "Would you like to add an author?(y/n):";
         $userInput = readline();
         $author = match ($userInput) {
-            "y" => $this->showAuthorList(),
-            default => $this->showAuthorsForm(),
+            "y" => $this->showAuthorsForm() ,
+            default => $this->showAuthorList(),
         };
-
-        $this->addAuthor($author);
-
         return $author;
     }
 
@@ -106,10 +107,12 @@ class Main
         $this->authors = array_merge($this->authors, $author);
     }
 
+
     public function showAllBooks(): void
     {
         $this->showBookCatalog();
     }
+
 
     public function showBookCatalog(): void
     {
@@ -141,8 +144,8 @@ class Main
 
     public function handleShowAuthorsBooks(): void
     {
-        $author = showAuthorsList();
-        getBooksByAuthor($author);
+        $author = $this->showAuthorList();
+        $this->bookRepository->getBooksByAuthor($author);
 
     }
 
@@ -162,11 +165,11 @@ class Main
         }
     }
 
-    private function showAuthorList(): array
+    private function showAuthorList(): int
     {
         $indexCounter = 0;
         foreach ($this->authors as $author) {
-            echo $indexCounter . ' ' . $author . "\n";
+            echo $indexCounter . ' ' . $author->getFirstName() . "\n";
             $indexCounter++;
         }
 
@@ -174,11 +177,11 @@ class Main
         $userInput = readline();
         switch ($userInput) {
             case $indexCounter:
-                return $author[$userInput];
+                return $userInput;
             default:
                 echo "invalid option\n";
                 break;
         }
-        return [];
+        return 0;
     }
 }
