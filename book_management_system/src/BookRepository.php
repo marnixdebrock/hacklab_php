@@ -29,12 +29,15 @@ class BookRepository
 
     public function getBooksByAuthor(int $id): void
     {
-        $counter = 0;
-        foreach ($this->books as $book) {
-            if($book[1] == $id){
-                echo $counter . '. ' . $book[0] . "\n";
-                $counter++;
+
+        $books = $this->getAll();
+
+        foreach ($books as $book) {
+            if($book->getAuthor()->getId() == $id){
+                echo $id . '. ' . $book->getAuthor->getTitle() . "\n";
+
             }
+            else echo "No books found\n";
         }
     }
 }

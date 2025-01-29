@@ -94,11 +94,10 @@ class Main
     {
         echo "Would you like to add an author?(y/n):";
         $userInput = readline();
-        $author = match ($userInput) {
+         return match ($userInput) {
             "y" => $this->showAuthorsForm() ,
             default => $this->showAuthorList(),
         };
-        return $author;
     }
 
 
@@ -117,13 +116,12 @@ class Main
     public function showBookCatalog(): void
     {
         $books = $this->bookRepository->getAll();
-        $counter = 0;
+
         if(!$books){
             echo "No books in the catalog\n";
         }else{
             foreach ($books as $book) {
-                echo $counter . '. ' .  $book->getTitle() . ' by ' . $book->getAuthor()->getFirstName() . "\n";
-                $counter++;
+                echo $book->getId() . '. ' .  $book->getTitle() . ' by ' . $book->getAuthor()->getFirstName() . "\n";
             }
         }
     }
@@ -167,16 +165,15 @@ class Main
 
     private function showAuthorList(): int
     {
-        $indexCounter = 0;
+
         foreach ($this->authors as $author) {
-            echo $indexCounter . ' ' . $author->getFirstName() . "\n";
-            $indexCounter++;
+            echo $author->getId() . '. ' . $author->getFirstName() . "\n";
         }
 
         echo "Pick one of the options and enter its respective index.\n";
         $userInput = readline();
         switch ($userInput) {
-            case $indexCounter:
+            case $author->getId():
                 return $userInput;
             default:
                 echo "invalid option\n";
