@@ -50,10 +50,7 @@ class Main
             $author = $this->handleAddAuthor();
         }
 
-        if (!in_array($author, $this->authors))
-        {
-            $this->addAuthor($author);
-        }
+//       if(array_find($this->$author, ))
 
         echo "Enter book title:\n";
         $userInputBookTitle = readline();
@@ -69,6 +66,15 @@ class Main
 
         echo "Enter amount of book pages:\n";
         $userInputBookPages = readline();
+
+        if (is_int($userInputBookPages) === false)
+        {
+            echo "Invalid input\n";
+            $userInputBookPages = 0;
+        }else{
+            $userInputBookPages = (int)$userInputBookPages;
+        }
+
 
         return array($userInputBookTitle, $author, $userInputBookIsbn, $userInputBookPublisher, $userInputBookPublishDate, $userInputBookPages);
 
@@ -87,7 +93,8 @@ class Main
 
 
 
-        return new Author($userInputAuthorFirstName, $userInputAuthorLastName, $userInputAuthorDateOfBirth);
+        $author = [$userInputAuthorFirstName, $userInputAuthorLastName, $userInputAuthorDateOfBirth];
+        return new Author(...$author);
     }
 
     public function handleAddAuthor(): Author
@@ -121,7 +128,7 @@ class Main
             echo "No books in the catalog\n";
         }else{
             foreach ($books as $book) {
-                echo $book->getId() . '. ' .  $book->getTitle() . ' by ' . $book->getAuthor()->getFirstName() . "\n";
+                echo $book->getId() . '. ' .  $book->getTitle() . ' by ' . $book->getAuthor()->getFirstName() . " " . $book->getAuthor()->getLastName() . "\n";
             }
         }
     }

@@ -32,7 +32,7 @@ class Author
         return $this->firstName;
     }
 
-    public function getLastName(int $id): string
+    public function getLastName(): string
     {
         return $this->lastName;
     }
@@ -44,6 +44,9 @@ class Author
 
     public function getDateOfBirthAsString(){}
 
-
+    public function getFullName(): string
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
 
 }

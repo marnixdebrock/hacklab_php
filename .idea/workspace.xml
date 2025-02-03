@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="more oop conversion and fixed some slight issues">
+    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="Implemented the displaying and removing of information of books, added tests, added some get functions,">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Author.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_management_system/src/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Main.php" afterDir="false" />
     </list>
@@ -29,7 +31,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/marnixdebrock/hacklab_php.git&quot;,
-    &quot;accountId&quot;: &quot;9f265ccd-29b3-49bb-9e49-e922fc98401c&quot;
+    &quot;accountId&quot;: &quot;60023739-0e07-419d-8f31-9349847b9580&quot;
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
@@ -78,7 +80,7 @@
     &quot;PHP Script.Book.php.executor&quot;: &quot;Run&quot;,
     &quot;PHP Script.BookRepository.php.executor&quot;: &quot;Run&quot;,
     &quot;PHP Script.Main.php.executor&quot;: &quot;Run&quot;,
-    &quot;PHP Script.index.php.executor&quot;: &quot;Run&quot;,
+    &quot;PHP Script.index.php.executor&quot;: &quot;Debug&quot;,
     &quot;PHPUnit.BookRepositoryTest.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.BookRepositoryTest.testBookRepositorygetAll.executor&quot;: &quot;Run&quot;,
     &quot;PHPUnit.MainTest.executor&quot;: &quot;Run&quot;,
@@ -156,6 +158,8 @@
       <workItem from="1738011731667" duration="1651000" />
       <workItem from="1738071824758" duration="7445000" />
       <workItem from="1738191190219" duration="33000" />
+      <workItem from="1738325341136" duration="110000" />
+      <workItem from="1738325752978" duration="9667000" />
     </task>
     <task id="LOCAL-00001" summary="Added book management system">
       <option name="closed" value="true" />
@@ -219,6 +223,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added book management system" />
     <MESSAGE value="test commit" />
@@ -229,10 +244,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
+        <line-breakpoint type="php">
           <url>file://$PROJECT_DIR$/book_management_system/src/index.php</url>
           <line>10</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/book_management_system/src/Main.php</url>
+          <line>69</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,7 +5,8 @@ class BookRepository
 {
     private array $books;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->books = [];
     }
 
@@ -29,13 +30,9 @@ class BookRepository
 
     public function getBooksByAuthor(int $id): void
     {
-
-        $books = $this->getAll();
-
-        foreach ($books as $book) {
+        foreach ($this->books as $book) {
             if($book->getAuthor()->getId() == $id){
-                echo $id . '. ' . $book->getAuthor->getTitle() . "\n";
-
+                echo $id . '. ' . $book->getTitle() . "\n";
             }
             else echo "No books found\n";
         }
