@@ -8,5 +8,5 @@ $main = new Main(new BookRepository());
 $run = True;
 
 while ($run) {
-    $main->showMainMenu();
+     $main->showMainMenu();
 }

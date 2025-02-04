@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="Implemented the displaying and removing of information of books, added tests, added some get functions,">
+    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="more oop conversion and fixed some slight issues">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Author.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_management_system/src/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/marnixdebrock/hacklab_php.git&quot;,
-    &quot;accountId&quot;: &quot;60023739-0e07-419d-8f31-9349847b9580&quot;
+    &quot;accountId&quot;: &quot;9f265ccd-29b3-49bb-9e49-e922fc98401c&quot;
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
@@ -96,6 +95,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -160,6 +160,7 @@
       <workItem from="1738191190219" duration="33000" />
       <workItem from="1738325341136" duration="110000" />
       <workItem from="1738325752978" duration="9667000" />
+      <workItem from="1738603638174" duration="2696000" />
     </task>
     <task id="LOCAL-00001" summary="Added book management system">
       <option name="closed" value="true" />
@@ -244,17 +245,21 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/book_management_system/src/index.php</url>
-          <line>10</line>
-          <option name="timeStamp" value="15" />
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/book_management_system/src/BookRepository.php</url>
+          <line>32</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/book_management_system/src/Main.php</url>
-          <line>69</line>
-          <option name="timeStamp" value="23" />
+          <line>31</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -50,7 +50,7 @@ class Main
             $author = $this->handleAddAuthor();
         }
 
-//       if(array_find($this->$author, ))
+
 
         echo "Enter book title:\n";
         $userInputBookTitle = readline();
@@ -74,8 +74,6 @@ class Main
         }else{
             $userInputBookPages = (int)$userInputBookPages;
         }
-
-
         return array($userInputBookTitle, $author, $userInputBookIsbn, $userInputBookPublisher, $userInputBookPublishDate, $userInputBookPages);
 
     }
@@ -92,9 +90,10 @@ class Main
         $userInputAuthorDateOfBirth = readline();
 
 
-
         $author = [$userInputAuthorFirstName, $userInputAuthorLastName, $userInputAuthorDateOfBirth];
-        return new Author(...$author);
+        $author = new Author(...$author);
+        $this->addAuthor($author);
+        return $author;
     }
 
     public function handleAddAuthor(): Author
@@ -133,12 +132,13 @@ class Main
         }
     }
 
+
     public function handleRemoveBook(): void
     {
         $id = $this->showRemoveBookForm();
         $this->showRemoveBookDialog($id);
-
     }
+
 
     public function showRemoveBookForm(): string
     {
@@ -147,14 +147,16 @@ class Main
         return readline();
     }
 
+
     public function handleShowAuthorsBooks(): void
     {
         $author = $this->showAuthorList();
         $this->bookRepository->getBooksByAuthor($author);
-
     }
 
+
     public function showBookDetails(int $id):void {}
+
 
     public function showRemoveBookDialog(int $id):void
     {
@@ -170,17 +172,21 @@ class Main
         }
     }
 
+
     private function showAuthorList(): int
     {
-
-        foreach ($this->authors as $author) {
-            echo $author->getId() . '. ' . $author->getFirstName() . "\n";
+        if(!empty($this->authors)){
+            foreach ($this->authors as $author) {
+                echo $author->getId() . '. ' . $author->getFirstName() . "\n";
+            }
+        }else{
+            echo "No authors in the catalog";
         }
 
         echo "Pick one of the options and enter its respective index.\n";
         $userInput = readline();
         switch ($userInput) {
-            case $author->getId():
+            case $this->authors->getId():
                 return $userInput;
             default:
                 echo "invalid option\n";
