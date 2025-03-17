@@ -1,4 +1,6 @@
 <?php
+namespace Marnix\BookManagementSystem;
+use \PDO;
 
 class Database
 {

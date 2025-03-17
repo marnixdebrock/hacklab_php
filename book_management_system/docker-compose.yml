@@ -1,0 +1,27 @@
+services:
+  web:
+    build: ./docker/web/
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "80:80"
+  db:
+    image: mysql:latest
+    volumes:
+      - db:/var/www/lib/mysql/
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=library_system
+      - MYSQL_USER=marnix
+      - MSQL_PASSWORD=password
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_HOST=db
+    depends_on:
+      - db
+volumes:
+  db:

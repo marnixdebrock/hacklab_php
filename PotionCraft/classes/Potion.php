@@ -34,9 +34,6 @@ class Potion extends Item
 
     public function getName() 
     {
-        return 
-
-        
     }
 
     public function getType() {}

@@ -1,12 +1,8 @@
 <?php
 namespace Marnix\BookManagementSystem;
+use Marnix\BookManagementSystem\services\Router;
+
 require_once "../vendor/autoload.php";
 
-
-$main = new Main(new BookRepository());
-
-$run = True;
-
-while ($run) {
-     $main->showMainMenu();
-}
+$router = new Router();
+$router->route();

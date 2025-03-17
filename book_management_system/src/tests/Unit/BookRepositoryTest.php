@@ -1,9 +1,9 @@
 <?php
 
-use Marnix\BookManagementSystem\Book;
+use Marnix\BookManagementSystem\models\Author;
+use Marnix\BookManagementSystem\models\Book;
+use Marnix\BookManagementSystem\repositories\BookRepository;
 use PHPUnit\Framework\TestCase;
-use Marnix\BookManagementSystem\BookRepository;
-use Marnix\BookManagementSystem\Author;
 
 class BookRepositoryTest extends TestCase
 {

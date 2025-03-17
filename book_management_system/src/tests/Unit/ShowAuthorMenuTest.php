@@ -1,13 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Marnix\BookManagementSystem\Main;
+use Marnix\BookManagementSystem\MainOld;
 
 class ShowAuthorMenuTest extends TestCase
 {
     public function testShowAuthorMenu()
     {
-        $main = new Main();
+        $main = new MainOld();
         $main->showAuthorsForm();
 
         $output = $this->getActualOutputForAssertion();

@@ -1,10 +1,10 @@
 <?php
 
-use Marnix\BookManagementSystem\Main;
+use Marnix\BookManagementSystem\MainOld;
+use Marnix\BookManagementSystem\models\Author;
+use Marnix\BookManagementSystem\models\Book;
+use Marnix\BookManagementSystem\repositories\BookRepository;
 use PHPUnit\Framework\TestCase;
-use Marnix\BookManagementSystem\BookRepository;
-use Marnix\BookManagementSystem\Book;
-use Marnix\BookManagementSystem\Author;
 
 class MainTest extends TestCase
 {
@@ -21,7 +21,7 @@ class MainTest extends TestCase
             $testBooks
         );
 
-        $main = new Main($mockBR);
+        $main = new MainOld($mockBR);
         $main->showBookCatalog();
 
         $output = $this->getActualOutputForAssertion();
