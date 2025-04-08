@@ -9,13 +9,12 @@ class PdoService
     private string $dbname = 'library_system';
     private string $username = 'root';
     private string $password = 'password';
-    private string $host = 'localhost';
+    private string $host = 'db:3306';
     private PDO $pdo;
     private static PdoService $pdoService;
 
     public function __construct()
     {
-
         $this->pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -68,7 +67,7 @@ class PdoService
         }
     }
 
-    public function executeTransaction($sql, $data): string
+    public function executeTransaction($sql, $data): int
     {
         try {
             if ($this->error != '') {
@@ -77,12 +76,19 @@ class PdoService
             try {
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute($data);
+                return $this->pdo->lastInsertId();
             } catch (PDOException $e) {
                 $this->error = $e->getMessage();
             }
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
         }
-        return '';
+        return 0;
     }
+
+    public function getError(): string
+    {
+        return $this->error;
+    }
+
 }

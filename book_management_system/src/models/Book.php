@@ -1,53 +1,59 @@
 <?php
 namespace Marnix\BookManagementSystem\models;
 
+use DateTime;
+
 class Book extends Item
 {
-    private static int $count = 0;
-    private int $id;
-    private readonly string $title;
-    private readonly Author $author;
+    private readonly int $authorId;
     private readonly string $isbn;
     private readonly string $publisher;
-    private readonly string $publicationDate;
+    private readonly DateTime $publicationDate;
     private readonly int $pages;
 
-    public function __construct(string $title, Author $author, string $isbn, string $publisher, string $publicationDate, int $pages)
+    public function __construct(?int $id, string $title, int $authorId, string $isbn, string $publisher, DateTime $publicationDate, int $pages)
     {
-        $this->id = ++static::$count;
-        $this->title = $title;
-        $this->author = $author;
+        parent::__construct($id, $title);
+        $this->authorId = $authorId;
         $this->isbn = $isbn;
         $this->publisher = $publisher;
         $this->publicationDate = $publicationDate;
         $this->pages = $pages;
     }
 
+    /**
+     * @throws \DateMalformedStringException
+     */
+    public static function fromArray(array $data): Book
+    {
+        return new self(
+            $data['id'],
+            $data['title'],
+            $data['authorId'],
+            $data['isbn'],
+            $data['publisher'],
+            new \DateTime($data['publicationDate']),
+            $data['pages']
+        );
+    }
+
     public function toArray(): array
     {
         return ['id' => $this->id,
                 'title' => $this->title,
-                'author' => $this->author,
+                'authorId' => $this->authorId,
                 'isbn' => $this->isbn,
                 'publisher' => $this->publisher,
-                'publicationDate',
+                'publicationDate' =>$this->publicationDate->format("Y-m-d"),
                 'pages' => $this->pages];
     }
 
-    public function getId(): int
+    public function getOverviewText(): string
     {
-        return $this->id;
+        return strval($this->title . ' ' . $this->authorId . ' ' . $this->getPublicationDate() . ' ' . $this->pages);
     }
 
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
 
-    public function getAuthor(): Author
-    {
-        return $this->author;
-    }
 
     public function getAuthorName(): string
     {
@@ -66,14 +72,16 @@ class Book extends Item
 
     public function getPublicationDate(): string
     {
-        return $this->publicationDate;
+        return $this->publicationDate->format('d-m-Y');
     }
 
-    public function getPublicationDateAsString(){}
+    public function getPublicationDateAsString()
+    {
+        return strval($this->publicationDate);
+    }
 
-
-
-
-
-
+    public function getPages()
+    {
+        return strval($this->pages);
+    }
 }

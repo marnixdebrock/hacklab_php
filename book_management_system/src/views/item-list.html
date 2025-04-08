@@ -1,0 +1,10 @@
+<ul>
+    <?php foreach ($items as $item) { ?>
+    <li>
+        <p>
+            <?php echo $item->getOverviewText(); ?>
+        </p>
+    </li>
+    <?php } ?>
+</ul>
+<a href="/?page=home">home</a>

@@ -1,0 +1,27 @@
+
+<ul>
+    <?php foreach ($magazines as $magazine) { ?>
+    <li>
+        <p>
+            <?php echo $magazine->getId(); ?>
+
+        </p>
+        <p>
+            <?php echo $magazine->getTitle(); ?>
+        </p>
+        <p>
+            <?php echo $magazine->getIssn(); ?>
+        </p>
+        <p>
+            <?php echo $magazine->getPublisher(); ?>
+        </p>
+        <p>
+            <?php echo $magazine->getPublicationDate(); ?>
+        </p>
+        <p>
+        <a href="/?page=magazine&action=remove&id=<?php echo $magazine->getId();?>">delete</a>
+        </p>
+    </li>
+    <?php } ?>
+</ul>
+<a href="/?page=home">home</a>

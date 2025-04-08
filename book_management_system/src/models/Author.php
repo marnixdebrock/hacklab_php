@@ -2,7 +2,7 @@
 
 namespace Marnix\BookManagementSystem\models;
 
-class Author extends Item
+class Author
 {
     private static int $count = 0;
     private int $id;
@@ -11,10 +11,10 @@ class Author extends Item
 
     private readonly string $lastName;
 
-    private readonly string $dateOfBirth;
+    private readonly \DateTime $dateOfBirth;
 
 
-    public function __construct(string $firstName, string $lastName, string $dateOfBirth)
+    public function __construct(string $firstName, string $lastName, \DateTime $dateOfBirth)
     {
         $this->id = ++static::$count;
         $this->firstName = $firstName;

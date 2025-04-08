@@ -1,35 +1,26 @@
-<html>
-    <body>
-    <p>
-        Title:
-        <?php echo $book->getTitle() ?>
-    </p>
-    <p>
-        Author:
-        <?php echo $author->getAuthorFirstName() . $book->getAuthorLastName() ?>
-    </p>
-    <p>
-        Author's date of birth:
-        <?php echo $author->getDateOfBirth() ?>
-    </p>
-    <p>
-        ISBN:
-        <?php echo $book->getIsbn() ?>
-    </p>
-    <p>
-        Publisher:
-        <?php echo $book->getStudentNumber() ?>
-    </p>
-    <p>
-        PublishingDate:
-        <?php echo $book->getPublishingDate() ?>
-    </p>
-    <p>
-        Pages:
-        <?php echo $book->getPages() ?>
-    </p>
-    <p>
-        <a href="/?page=home">home</a>
-    </p>
-    </body>
-</html>
+<ul>
+    <?php foreach ($books as $book) { ?>
+    <li>
+        <p>
+            <?php echo $book->getId(); ?>
+
+        </p>
+        <p>
+            <?php echo $book->getTitle(); ?>
+        </p>
+        <p>
+            <?php echo $book->getIsbn(); ?>
+        </p>
+        <p>
+            <?php echo $book->getPublisher(); ?>
+        </p>
+        <p>
+            <?php echo $book->getPublicationDate(); ?>
+        </p>
+        <p>
+        <a href="/?page=book&action=remove&id=<?php echo $book->getId();?>">delete</a>
+        </p>
+    </li>
+    <?php } ?>
+</ul>
+<a href="/?page=home">home</a>

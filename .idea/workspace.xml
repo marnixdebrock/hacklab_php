@@ -4,33 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="Added minor fixes">
-      <change afterPath="$PROJECT_DIR$/book_management_system/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/docker/web/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/controllers/BookController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/controllers/MainController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/models/Item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/repositories/AuthorRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/services/PdoService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/services/QueryBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/services/Router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/author-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/author-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/book-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/book-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/book-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/main-menu.html" afterDir="false" />
+    <list default="true" id="2b2185db-6bce-40d2-a5a5-b6b5143ee102" name="Changes" comment="Finished project">
+      <change afterPath="$PROJECT_DIR$/book_management_system/_Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/controllers/ItemController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/controllers/MagazineController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/models/Magazine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/repositories/MagazineRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/services/ItemService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/item-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/magazine-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/magazine-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book_management_system/src/views/magazine-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotionCraft/classes/Potion.php" beforeDir="false" afterPath="$PROJECT_DIR$/PotionCraft/classes/Potion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PotionCraft/service/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/PotionCraft/service/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/models/Author.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/models/Book.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/repositories/BookRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/Main_old.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/tests/Unit/BookRepositoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/BookRepositoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/tests/Unit/MainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/MainTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_management_system/src/tests/Unit/ShowAuthorMenuTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/tests/Unit/ShowAuthorMenuTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/controllers/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/controllers/BookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/models/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/models/Author.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/models/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/models/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/models/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/models/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/repositories/BookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/repositories/BookRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/services/PdoService.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/services/PdoService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/services/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/services/QueryBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/services/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/services/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/views/book-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/views/book-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/views/book-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/views/book-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/views/book-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/views/book-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_management_system/src/views/main-menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_management_system/src/views/main-menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +57,24 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/marnixdebrock/hacklab_php.git&quot;,
-    &quot;accountId&quot;: &quot;60023739-0e07-419d-8f31-9349847b9580&quot;
+    &quot;accountId&quot;: &quot;fbca3a26-1aeb-4715-a7bd-c5cd4b84f869&quot;
   }
 }</component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="43591" listening_started="true">
+    <xdebug_debug_ports port="43591" />
+    <xdebug_debug_ports port="9003" />
+    <xdebug_debug_ports port="32893" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="9c836a89-78ca-459c-9619-6b1f852993c2" name="localhost" port="8080" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/book_management_system/src" remote-root="/var/www/html/src" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/book_management_system/vendor/sebastian/cli-parser" />
@@ -118,22 +131,30 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/htdocs/hacklab_php",
+    "last_opened_file_path": "/home/marnix/Documents/hacklab_php/drone_parts_picker",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "mysql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/drone_parts_picker" />
+      <recent name="$PROJECT_DIR$/book_management_system/src/views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\hacklab_php\book_management_system\src" />
       <recent name="C:\xampp\htdocs\php\hacklab_php\book_management_system\src" />
@@ -209,6 +230,18 @@
       <workItem from="1741958914177" duration="462000" />
       <workItem from="1741959455158" duration="1001000" />
       <workItem from="1742228930652" duration="5006000" />
+      <workItem from="1742560628311" duration="8321000" />
+      <workItem from="1742576608236" duration="220000" />
+      <workItem from="1742750587113" duration="3943000" />
+      <workItem from="1742824919325" duration="1645000" />
+      <workItem from="1742826961981" duration="383000" />
+      <workItem from="1742897909659" duration="15676000" />
+      <workItem from="1742933853715" duration="337000" />
+      <workItem from="1743100789843" duration="4918000" />
+      <workItem from="1743157586894" duration="12449000" />
+      <workItem from="1743762165914" duration="2218000" />
+      <workItem from="1744057242038" duration="1229000" />
+      <workItem from="1744106394916" duration="6505000" />
     </task>
     <task id="LOCAL-00001" summary="Added book management system">
       <option name="closed" value="true" />
@@ -288,7 +321,8 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="Implemented the displaying and removing of information of books, added tests, added some get functions" />
     <MESSAGE value="more oop conversion and fixed some slight issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="more oop conversion and fixed some slight issues" />
+    <MESSAGE value="Finished project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

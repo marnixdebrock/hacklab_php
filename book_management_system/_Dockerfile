@@ -1,0 +1,17 @@
+FROM php:apache
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/src
+ENV APACHE_ROOT_USER=root
+ENV MARIADB_ROOT_PASSWORD=password
+RUN docker-php-ext-install pdo pdo_mysql
+EXPOSE 80
+
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+LABEL org.opencontainers.image.source="https://github.com/MilesChou/docker-xdebug" \
+    repository="https://github.com/MilesChou/docker-xdebug" \
+    maintainer="MilesChou <jangconan@gmail.com>"
+
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+

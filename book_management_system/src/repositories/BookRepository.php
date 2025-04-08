@@ -1,32 +1,40 @@
 <?php
 namespace Marnix\BookManagementSystem\repositories;
-
 use Marnix\BookManagementSystem\models\Book;
+use Marnix\BookManagementSystem\services\QueryBuilder;
+
 
 class BookRepository
 {
-    private array $books;
+
+    private QueryBuilder $queryBuilder;
 
     public function __construct()
     {
-        $this->books = [];
+        $this->queryBuilder = new QueryBuilder('books');
     }
 
-    public function add(Book ...$books): void
+    public function add(Book $book): void
     {
-        $this->books = array_merge($this->books, $books);
+        $this->queryBuilder->add($book);
     }
 
-    public function get(int $id){}
+    public function get(int $id): Book
+    {
+       return Book::fromArray($this->queryBuilder->get($id)[0]);
+    }
 
+    /**
+     * @throws \DateMalformedStringException
+     */
     public function getAll(): array
     {
-        return $this->books;
+        return $this->toBooks(($this->queryBuilder->getAll()));
     }
 
     public function delete(int $id): void
     {
-        unset($this->books[$id]);
+        $this->queryBuilder->delete($id);
     }
 
 
@@ -36,6 +44,24 @@ class BookRepository
             if($book->getAuthor()->getId() == $id){
                 echo $id . '. ' . $book->getTitle() . "\n";
             }
+        }
+    }
+
+    /**
+     * @throws \DateMalformedStringException
+     */
+    public static function toBooks($books): array
+    {
+        if($books == [])
+        {
+            echo 'No Books in Catalog';
+            return $data[] = [];
+        }else{
+            foreach ($books as $book)
+            {
+                $data[] = Book::fromArray($book);
+            }
+            return $data;
         }
     }
 }

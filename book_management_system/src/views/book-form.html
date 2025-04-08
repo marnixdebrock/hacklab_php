@@ -4,6 +4,7 @@
 </head>
 
 <body>
+<h1>Add Book</h1>
 <form method="post" action="?page=book&action=store">
     <div>
         <label for="title">title</label>
@@ -16,16 +17,16 @@
     </div>
     <div>
         <label for="lastName">last name author</label>
-        <input type="text" name="firstName" id="lastName">
+        <input type="text" name="lastName" id="lastName">
     </div>
     <div>
         <label for="dateOfBirth">date of birth author</label>
-        <input type="text" name="dateOfBirth" id="dateOfBirth">
+        <input type="date" name="dateOfBirth" id="dateOfBirth">
     </div>
 
     <div>
         <label for="isbn">isbn</label>
-        <input type="text" name="isbn" id="isbn">
+        <input type="number" name="isbn" id="isbn">
     </div>
 
     <div>
@@ -33,18 +34,17 @@
         <input type="text" name="publisher" id="publisher">
     </div>
     <div>
-        <label for="publishingDate">publishing date</label>
-        <input type="text" name="publishingDate" id="publishingDate">
+        <label for="publicationDate">publishing date</label>
+        <input type="date" name="publicationDate" id="publicationDate">
     </div>
     <div>
         <label for="pages">pages</label>
         <input type="number" name="pages" id="pages">
     </div>
 
-    <input type="submit" placeholder="send">
-
-
+    <input type="submit" value="send">
 </form>
+<a href="/?page=home">home</a>
 </body>
 
 </html>
